@@ -31,7 +31,7 @@
                 <p class="question">Insert Questions Here </p>
                 <ul><!--Choices will be inserted here--></ul>
                 <button type="submit" id="submit">Submit</button>
-                <p class="quiz-progress">You are on:<span class="progress"></span>   Your score is<span class="score"></span></p>
+                <p class="quiz-progress">Question: <span class="progress">|</span> Current Score: <span class="score"></span></p>
                 <!--Reset button-->
                 <button type="submit" id="reset">Restart the Quiz</button>
             </section>
@@ -41,14 +41,16 @@
              <h1>You Answer is <span class="result">correct/incorrect</span></h1>
              <dev class="picture">pic4</dev>
              <p class="explanation">This is why your answer was correct</p>
+             <button type="submit" id="next">Next</button>
              <button type="submit" id="reset">Restart the Quiz</button>
             </section>
 
             <!--Display this when the quiz end-->
             <section class="quiz-end">
                 <p>Congratulations!! You finished the quiz</p>
+                <p>You overall score is <span class="score"></span></p>
                 <dev class="picture">pic4</dev>
-                 <!--Reset button-->
+                 <!--Restart button-->
                 <button type="submit" id="reset">Try Again</button>
             </section>
         </form> 
