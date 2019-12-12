@@ -1,0 +1,36 @@
+header{
+    text-align: center;
+}
+
+.top-picture{
+    display: block;
+    margin: 10px auto;
+    width: 60%;
+    height: 120px; 
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.quiz-container{
+    text-align: center;
+    display: block;
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 25px;
+    width: 80%;
+}
+
+.start-picture{
+    display: block;
+    border-radius: 25px;
+    margin: 30px auto;
+    border: 1px solid black;
+    width: 75%;
+    height: 300px;
+}
+
+.choices{
+    display: none;
+}
+
