@@ -8,25 +8,50 @@
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
+    <!--Top design on the quiz app. This will not be removed-->
     <header>
         <h1 class="Title">Hawaii Quiz</h1>
         <dev class="top-picture">Pic1</dev>
     </header>
+
     <!--This contains the questions-->
-    <section class="quiz-container">
-        <!--This is where the questions are inserted-->
-        <p class="questions">This quiz is to test your knowledge on Hawaii</p>
-        <!-- Remove this once te user clicks on "Start the Quiz"-->
-        <form class="quiz-start">
-            <button type="button" class="quiz-start">Start the Quiz</button>
-            <dev class="start-picture quiz-start">pic2</dev>
-        </form>
-        <!-- This is where the answer choices are displayed -->
-        <form class="choices">
-            <!--Choices will be inserted here-->
-            <button type="submit" id="submit">Submit</button>
-            <p class="user-score">Your current score is</p>
-        </form>
-    </section>
+    <dev class="quiz-container">
+       
+    
+        <form class="quiz">
+            <!-- Remove this once the user clicks on "Start the Quiz" -->
+            <section class="quiz-start">
+                <p>This test is to test your knowledge on Hawaii</p>
+                <button type="button" id="start">Start the Quiz</button>
+                <dev class="picture">pic2</dev>
+            </section>
+
+            <!-- This is where the question and answer choices are displayed -->
+            <section class="questions">
+                <p class="question">Insert Questions Here </p>
+                <ul><!--Choices will be inserted here--></ul>
+                <button type="submit" id="submit">Submit</button>
+                <p class="quiz-progress">You are on:<span class="progress"></span>   Your score is<span class="score"></span></p>
+                <!--Reset button-->
+                <button type="submit" id="reset">Restart the Quiz</button>
+            </section>
+
+            <!--Display the answer and explations-->
+            <section class="answer">
+             <h1>You Answer is <span class="result">correct/incorrect</span></h1>
+             <dev class="picture">pic4</dev>
+             <p class="explanation">This is why your answer was correct</p>
+             <button type="submit" id="reset">Restart the Quiz</button>
+            </section>
+
+            <!--Display this when the quiz end-->
+            <section class="quiz-end">
+                <p>Congratulations!! You finished the quiz</p>
+                <dev class="picture">pic4</dev>
+                 <!--Reset button-->
+                <button type="submit" id="reset">Try Again</button>
+            </section>
+        </form> 
+    </dev>    
 </body>
 </html>

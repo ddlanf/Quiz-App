@@ -21,7 +21,7 @@ header{
     width: 80%;
 }
 
-.start-picture{
+.picture{
     display: block;
     border-radius: 25px;
     margin: 30px auto;
@@ -30,7 +30,20 @@ header{
     height: 300px;
 }
 
-.choices{
+.quiz-start{
+}
+
+.questions{
     display: none;
 }
+
+.answer{
+    display: none;
+
+}
+
+.quiz-end{
+    display: none;
+}
+   
 
