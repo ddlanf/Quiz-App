@@ -10,50 +10,72 @@
 <body>
     <!--Top design on the quiz app. This will not be removed-->
     <header>
-        <h1 class="Title">Hawaii Quiz</h1>
+        <h1 class="title">Hawaii Quiz</h1>
+        <dev class="top-pic-container">     
+        <dev class="additional-pic">additional pic</dev>
         <dev class="top-picture">Pic1</dev>
+        <dev class="additional-pic">additional pic</dev>
+        </dev>  
     </header>
 
     <!--This contains the questions-->
     <dev class="quiz-container">
        
-    
         <form class="quiz">
-            <!-- Remove this once the user clicks on "Start the Quiz" -->
+            <!-- This is the startig screen. Remove this once the user clicks on "Start the Quiz" -->
             <section class="quiz-start">
-                <p>This test is to test your knowledge on Hawaii</p>
+                <p>This quiz is to test your knowledge on Hawaii</p>
                 <button type="button" id="start">Start the Quiz</button>
-                <dev class="picture">pic2</dev>
+                <dev class="picture-start">pic2</dev>
             </section>
 
             <!-- This is where the question and answer choices are displayed -->
             <section class="questions">
-                <p class="question">Insert Questions Here </p>
-                <ul><!--Choices will be inserted here--></ul>
+                <p class="question">Q.<span class="progress"> </span>|----------------------Insert Questions here-----------------------------------|</p>
+                <fieldset class="four-choices">
+                    <label class="choice" for="choice">
+                        <input class="radio" type="radio" id=answer-one value=answer-one name=choice required>
+                        <span>--Choice 1 is inserted here--</span>
+                    </label>
+                    <label class="choice" for="choice">
+                        <input class="radio" type="radio" id=answer-two value=answer-two name=choice required>
+                        <span>--Choice 2 is inserted here--</span>
+                    </label>
+                    <label class="choice" for="choice">
+                        <input class="radio" type="radio" id=answer-three value=answer-three name=choice required>
+                        <span>--Choice 3 is inserted here--</span>
+                    </label>
+                    <label class="choice-last" for="choice">
+                        <input class="radio" type="radio" id=answer-four value=answer-four name=choice required>
+                        <span>--Choice 4 is inserted here--</span>
+                    </label>
+               </fieldset>
                 <button type="submit" id="submit">Submit</button>
                 <p class="quiz-progress">Question: <span class="progress">|</span> Current Score: <span class="score"></span></p>
-                <!--Reset button-->
+                <!--Reset button, make sure to remove the "required" attrribute from the radio butonns when clicked"-->
                 <button type="submit" id="reset">Restart the Quiz</button>
             </section>
 
             <!--Display the answer and explations-->
             <section class="answer">
              <h1>You Answer is <span class="result">correct/incorrect</span></h1>
-             <dev class="picture">pic4</dev>
-             <p class="explanation">This is why your answer was correct</p>
+             <dev class="quiz-picture">pic4</dev>
+             <p class="answer-to-quiz-p">Answer: <span id="answer-to-quiz"></span></p>
+             <p class="explanation">|----------------------------------------------------------------------------------------------------------Explanation  goes here-------------------------------------------------------------------------------------------------|</p>
              <button type="submit" id="next">Next</button>
              <button type="submit" id="reset">Restart the Quiz</button>
             </section>
 
-            <!--Display this when the quiz end-->
+            <!--Display this when the quiz ends-->
             <section class="quiz-end">
                 <p>Congratulations!! You finished the quiz</p>
                 <p>You overall score is <span class="score"></span></p>
-                <dev class="picture">pic4</dev>
+                <dev class="picture-end">pic4</dev>
                  <!--Restart button-->
                 <button type="submit" id="reset">Try Again</button>
             </section>
         </form> 
     </dev>    
+
 </body>
 </html>

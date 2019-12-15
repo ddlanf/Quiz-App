@@ -1,11 +1,15 @@
+/*For the header design*/
 header{
     text-align: center;
 }
 
+.top-pic-container{
+    margin: 5px auto;
+}
+
 .top-picture{
-    display: block;
-    margin: 10px auto;
-    width: 60%;
+    display: inline-block;
+    width: 300px;
     height: 120px; 
     border: 1px solid black;
     border-radius: 100px;
@@ -19,25 +23,133 @@ header{
     padding: 10px;
     border-radius: 25px;
     width: 80%;
+    height: 500px;
 }
 
-.picture{
+/*Starting screen*/
+.picture-start{
     display: block;
     border-radius: 25px;
-    margin: 30px auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
     border: 1px solid black;
     width: 75%;
     height: 300px;
 }
 
+/*Question section*/
+.question{
+    margin-bottom: 20px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choice{
+    display: block;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.choice-last{
+    display: block;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.four-choices{
+    border: none;
+    margin-bottom: 30px;
+}
+
+/* Quiz answern section*/
+.quiz-picture{
+    display: block;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.answer-to-quiz-p{
+    margin-top: 5px;
+}
+.explanation{
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 14px;
+    margin-top: 0px;
+}
+#next{
+    display: block;
+    margin: 10px auto;
+}
+
+/*End of quiz section*/
+.picture-end{
+    display: block;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 1px solid black;
+    width: 75%;
+    height: 300px;
+}
+
+/*Additional pics*/
+.additional-pic{
+    display: none;
+    width: 200px;
+    height: 120px; 
+    border: 1px solid black;
+}
+
+
+@media only screen and (min-width: 850px) {
+    .additional-pic{
+        display: inline-block; 
+    }
+
+    .top-picture{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .choice{
+        margin-bottom: 40px;
+    }
+
+    .four-choices{
+        margin-top: 20px;
+        margin-bottom: 35px;
+    }
+
+    .quiz-picture{
+        height: 250px;
+    }
+
+    .explanation{
+        font-size: 18px;
+        margin-top: 0px;
+    }
+}
+
+/* User this section to switch to different parts of the quiz*/
+
 .quiz-start{
     
 }
 
+    
 .questions{
     display: none;
 }
-
 .answer{
     display: none;
 }
@@ -45,5 +157,3 @@ header{
 .quiz-end{
     display: none;
 }
-   
-
