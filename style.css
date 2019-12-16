@@ -23,7 +23,6 @@ header{
     padding: 10px;
     border-radius: 25px;
     width: 80%;
-    height: 500px;
 }
 
 /*Starting screen*/
@@ -32,7 +31,8 @@ header{
     border-radius: 25px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-top: 30px;
     border: 1px solid black;
     width: 75%;
     height: 300px;
@@ -117,7 +117,6 @@ header{
     }
 
     .top-picture{
-        display:inline-block;
         margin-left: 5%;
         margin-right: 5%;
     }

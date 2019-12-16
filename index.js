@@ -12,12 +12,13 @@ function startQuiz(){
 function renderQuiz(){
     const question = getQuestion(STORE);
     const options = getOptions(STORE);
+    $('.option').remove();
     $('.question').html(`Q${STORE.currentQuestion}. ` + question);
     for(let i = 0; i < options.length; i++){
         $('.four-choices').append(`
-        <label class="choice choice-${i+1}" for="choice">
-        <input class="radio" type="radio" id="${i}" name="choice" values="${options[i]}"required>
-        <span class="answer-one-text">${options[i]}</span>
+        <label class="choice choice-${i+1} option" for="choice">
+        <input class="radio option" type="radio" id="${i}" name="choice" values="${options[i]}"required>
+        <span class="answer-one-text option">${options[i]}</span>
         </label>`);
     }
     $('.questions').css('display', 'block');
@@ -68,18 +69,17 @@ function answerCheck(item){
 
 //This function is used to transition to the answer to the next quiz or to the ending section 
 function nextQuiz(){
+    $('#next').click(function(event){
+        STORE.currentQuestion++;
+        $('.answer').css('display', 'none');
+        renderQuiz();
+    });
+}
+
+//This function is used to transition to the ending page
+function endQuiz(){
     
-}
-
-//This function restarts the quiz
-function restartQuiz(){
-    console.log('Running restartQuiz()');
 } 
-
-//This function updates progress and score
-function updateProgressAndScore(){
-    console.log('Running updateProgressAndScore()');
-}
 
 //This function restarts the quiz from the ending page
 function restartQuiz(){
@@ -89,6 +89,7 @@ function restartQuiz(){
 function runTheQuiz(){
     startQuiz();
     showAnswer();
+    nextQuiz();
 }
 
 $(runTheQuiz);
