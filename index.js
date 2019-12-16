@@ -85,19 +85,29 @@ function nextQuiz(){
 //This function is used to transition to the ending page
 function endQuiz(){
     $('.answer').css('display', 'none');
-    $('.score').html(STORE.correctAnswers +'out of 5');
+    $('.score').html(STORE.correctAnswers +' out of 5');
     $('.quiz-end').css('display', 'block');
 } 
 
 //This function restarts the quiz from the ending page
 function restartQuiz(){
-    
+    $('.reset').click(function(event){
+        $(this).closest('section').css('display', 'none');
+        resetValues();
+    });
+}
+
+function resetValues(){
+    STORE.currentQuestion = 1;
+    STORE.correctAnswers = 0;
+    renderQuiz();
 }
 
 function runTheQuiz(){
     startQuiz();
     showAnswer();
     nextQuiz();
+    restartQuiz();
 }
 
 $(runTheQuiz);
