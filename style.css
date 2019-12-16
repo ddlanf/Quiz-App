@@ -4,14 +4,21 @@ header{
 }
 
 .top-pic-container{
-    margin: 5px auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.title{
+    font-family: 'Calligraffitti', cursive;
+    font-size: 60px;
+    margin-bottom: 0;
 }
 
-.top-picture{
+img.top-picture{
     display: inline-block;
     width: 300px;
-    height: 120px; 
-    border: 1px solid black;
+    height: 200px; 
+    border: 1px solid lightblue;
     border-radius: 100px;
 }
 
@@ -23,6 +30,7 @@ header{
     padding: 10px;
     border-radius: 25px;
     width: 80%;
+    height: 600px;
 }
 
 /*Starting screen*/
@@ -32,7 +40,7 @@ header{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 25px;
-    margin-top: 30px;
+    margin-top: 100px;
     border: 1px solid black;
     width: 75%;
     height: 300px;
@@ -95,11 +103,11 @@ header{
     border-radius: 25px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 40px;
     border: 1px solid black;
     width: 75%;
-    height: 300px;
+    height: 350px;
 }
 
 /*Additional pics*/
@@ -111,9 +119,10 @@ header{
 }
 
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 900px) {
     .additional-pic{
         display: inline-block; 
+        border: none; 
     }
 
     .top-picture{

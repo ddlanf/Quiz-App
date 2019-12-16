@@ -51,8 +51,10 @@ function showAnswer(){
         else{
             $('.result').html('Incorrect').css('color', 'red');
         }
+        $('quiz-picture').html(`<img src="images/Q1_answers.jpg" alt="Q1_answer">`);
         $('#answer-to-quiz').html(`${STORE.questions[STORE.currentQuestion-1].options[STORE.questions[STORE.currentQuestion-1].answer]}`);
         $('.explanation').html(`${STORE.questions[STORE.currentQuestion-1].explanation}`);
+        if(STORE.currentQuestion === 5){ $('.reset').remove(); }
         $('.answer').css('display', 'block');
     }); 
 }
