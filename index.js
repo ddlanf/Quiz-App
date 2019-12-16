@@ -117,7 +117,7 @@ function checkIfResetIsNeeded(num){
 }
 //This function adjust the font size
 function adjustQuestionSize(questions, options){
-    alert("hello");
+    
 }
 
 function runTheQuiz(){

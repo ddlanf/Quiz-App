@@ -78,7 +78,7 @@ img.top-picture{
     margin-top: 12px;
     margin-left: 2px auto;
     margin-right: 2px auto;
-    font-size: 35px;
+    font-size: 43px;
 }
 
 .choice{
@@ -136,6 +136,7 @@ img.top-picture{
 
 .answer-text-top{
     font-size: 35px;
+    margin-bottom: 0;
 }
 .quiz-picture{
     display: block;
@@ -150,14 +151,14 @@ img.top-picture{
 
 .answer-to-quiz-p{
     margin-top: 0;
-    margin-bottom: 10pxpx;
+    margin-bottom: 0;
     font-size: 40px;
 }
 .explanation{
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 0;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 #next{
