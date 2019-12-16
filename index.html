@@ -21,7 +21,6 @@
     <!--This contains the questions-->
     <dev class="quiz-container">
        
-        <form class="quiz">
             <!-- This is the startig screen. Remove this once the user clicks on "Start the Quiz" -->
             <section class="quiz-start">
                 <p>This quiz is to test your knowledge on Hawaii</p>
@@ -32,22 +31,17 @@
             <!-- This is where the question and answer choices are displayed -->
             <section class="questions">
                 <p class="question"></p>
-                <fieldset class="four-choices">
-                <!--   
-                    <label class="choice" for="choice">
-                        <input class="radio" type="radio" id="answer-one" value="answer-one" name="choice" required>
-                        <span class="answer-two-text">--Choice 2 is inserted here--</span class="answer-one-text">
-                    </label>
-                    <label class="choice" for="choice">
-                        <input class="radio" type="radio" id="answer-one" value="answer-one" name="choice" required>
-                        <span class="answer-three-text">--Choice 3 is inserted here--</span class="answer-three-text">
-                    </label>
-                    <label class="choice-last" for="choice">
-                        <input class="radio" type="radio" id="answer-one" value="answer-one" name="choice" required>
-                        <span class="answer-four-text">--Choice 4 is inserted here--</span class="answer-one-text">
-                    </label>--> 
-               </fieldset>
-                <button type="submit" id="submit">Submit</button>
+                <form id="quiz">
+                    <fieldset class="four-choices">
+                        <!--   
+                            <label class="choice" for="choice">
+                                <input class="radio" type="radio" id="answer-one" value="answer-one" name="choice" required>
+                                <span class="answer-two-text">--Choice 2 is inserted here--</span class="answer-one-text">
+                            </label>
+                        --> 
+                     </fieldset>
+                     <button type="submit" id="quiz-submit">Submit</button>
+               </form>
                 <p class="quiz-progress">Question: <span class="progress">|</span> Current Score: <span class="score"></span></p>
                 <!--Reset button, make sure to remove the "required" attrribute from the radio butonns when clicked"-->
                 <button type="submit" id="reset">Restart the Quiz</button>
@@ -71,7 +65,6 @@
                  <!--Restart button-->
                 <button type="submit" id="reset">Try Again</button>
             </section>
-        </form> 
     </dev>    
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="index.js"></script>

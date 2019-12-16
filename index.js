@@ -16,7 +16,7 @@ function renderQuiz(){
     for(let i = 0; i < options.length; i++){
         $('.four-choices').append(`
         <label class="choice choice-${i+1}" for="choice">
-        <input class="radio" type="radio" id="answer-${i+1}" value="answer-${i+1}" name="choice" required>
+        <input class="radio" type="radio" id="${i}" name="choice" values="${options[i]}"required>
         <span class="answer-one-text">${options[i]}</span>
         </label>`);
     }
@@ -37,12 +37,23 @@ function getOptions(item){
 
 //This function is used to transition to the answer screen and shows the answer
 function showAnswer(){
-
+    //Get the answer
+    $('#quiz').submit(function(event){
+        const answerId = $('input[name=choice]:checked', '#quiz').attr('id');
+        const answer = answerCheck(answerId);
+        alert(answer);
+    });
 }
 
 //This function checks the answer and return true or false
-function answerCheck(){
-    console.log('Running answerCheck()');
+function answerCheck(item){
+   if(STORE.questions[STORE.currentQuestion-1].answer == item){
+       STORE.correctAnswers++;
+       return true;
+   }
+   else{
+       return false;
+   }
 }
 
 //This function is used to transition to the answer to the next quiz or to the ending section 
@@ -67,8 +78,6 @@ function restartQuiz(){
 
 function runTheQuiz(){
     startQuiz();
-    getQuestion();
-    getOptions();
     showAnswer();
     nextQuiz();
     restartQuiz();
