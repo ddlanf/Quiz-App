@@ -20,7 +20,7 @@ function renderQuiz(){
         <span class="answer-one-text">${options[i]}</span>
         </label>`);
     }
-    $('.questions').css('display', 'block')
+    $('.questions').css('display', 'block');
 }
 
 //This function grabs the question from the object
@@ -37,12 +37,22 @@ function getOptions(item){
 
 //This function is used to transition to the answer screen and shows the answer
 function showAnswer(){
-    //Get the answer
     $('#quiz').submit(function(event){
+        event.preventDefault();
         const answerId = $('input[name=choice]:checked', '#quiz').attr('id');
-        const answer = answerCheck(answerId);
-        alert(answer);
-    });
+        const correctAnswer = answerCheck(answerId);
+        $('.questions').css('display', 'none')
+        if(correctAnswer === true){
+           // alert("correct");
+            $('.result').html('Correct!!').css('color', 'green');
+        }
+        else{
+            $('.result').html('Incorrect').css('color', 'red');
+        }
+        $('#answer-to-quiz').html(`${STORE.questions[STORE.currentQuestion-1].options[STORE.questions[STORE.currentQuestion-1].answer]}`);
+        $('.explanation').html(`${STORE.questions[STORE.currentQuestion-1].explanation}`);
+        $('.answer').css('display', 'block');
+    }); 
 }
 
 //This function checks the answer and return true or false
@@ -58,7 +68,7 @@ function answerCheck(item){
 
 //This function is used to transition to the answer to the next quiz or to the ending section 
 function nextQuiz(){
-    console.log('Running showQuiz()');
+    
 }
 
 //This function restarts the quiz
@@ -79,10 +89,6 @@ function restartQuiz(){
 function runTheQuiz(){
     startQuiz();
     showAnswer();
-    nextQuiz();
-    restartQuiz();
-    updateProgressAndScore();
-    restartQuiz();
 }
 
 $(runTheQuiz);

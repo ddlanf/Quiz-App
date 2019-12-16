@@ -45,4 +45,3 @@ STORE = {
     correctAnswers: 0
 };
 
-console.log(STORE.questions[STORE.currentQuestion].question);
