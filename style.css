@@ -52,7 +52,7 @@ header{
     margin-bottom: 35px;
 }
 
-.choice-last{
+.choice-4{
     display: block;
     text-align: left;
     margin-bottom: 30px;
@@ -143,10 +143,9 @@ header{
 /* User this section to switch to different parts of the quiz*/
 
 .quiz-start{
-    
+    display: block;
 }
 
-    
 .questions{
     display: none;
 }

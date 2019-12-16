@@ -31,24 +31,21 @@
 
             <!-- This is where the question and answer choices are displayed -->
             <section class="questions">
-                <p class="question">Q.<span class="progress"> </span>|----------------------Insert Questions here-----------------------------------|</p>
+                <p class="question"></p>
                 <fieldset class="four-choices">
+                <!--   
                     <label class="choice" for="choice">
-                        <input class="radio" type="radio" id=answer-one value=answer-one name=choice required>
-                        <span>--Choice 1 is inserted here--</span>
+                        <input class="radio" type="radio" id="answer-one" value="answer-one" name="choice" required>
+                        <span class="answer-two-text">--Choice 2 is inserted here--</span class="answer-one-text">
                     </label>
                     <label class="choice" for="choice">
-                        <input class="radio" type="radio" id=answer-two value=answer-two name=choice required>
-                        <span>--Choice 2 is inserted here--</span>
-                    </label>
-                    <label class="choice" for="choice">
-                        <input class="radio" type="radio" id=answer-three value=answer-three name=choice required>
-                        <span>--Choice 3 is inserted here--</span>
+                        <input class="radio" type="radio" id="answer-one" value="answer-one" name="choice" required>
+                        <span class="answer-three-text">--Choice 3 is inserted here--</span class="answer-three-text">
                     </label>
                     <label class="choice-last" for="choice">
-                        <input class="radio" type="radio" id=answer-four value=answer-four name=choice required>
-                        <span>--Choice 4 is inserted here--</span>
-                    </label>
+                        <input class="radio" type="radio" id="answer-one" value="answer-one" name="choice" required>
+                        <span class="answer-four-text">--Choice 4 is inserted here--</span class="answer-one-text">
+                    </label>--> 
                </fieldset>
                 <button type="submit" id="submit">Submit</button>
                 <p class="quiz-progress">Question: <span class="progress">|</span> Current Score: <span class="score"></span></p>
@@ -76,6 +73,8 @@
             </section>
         </form> 
     </dev>    
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="index.js"></script>
+ <script src="STORE.js"></script>
 </body>
 </html>
