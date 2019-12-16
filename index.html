@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title class="top-text">Quiz App</title>
+    <title>Quiz App</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Calligraffitti|Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--Top design on the quiz app. This will not be removed-->
     <header>
     <h1 class="title">Hawaii Quiz</h1>
     <dev class="top-pic-container">     
-        <dev class="additional-pic one"><img src="images/additional_pics_1.jpg" alt="additional-pic-one" /></dev>
+        <dev class="additional-pic one"><img src="images/additional_pics_1.png" alt="additional-pic-one" /></dev>
         <dev class="top-picture"><img class = "top-picture" src="images/Top-pic.jpg" alt="additional-pic-one" /></dev>
-        <dev class="additional-pic two"><img src="images/additional_pics_2.jpg" alt="additional-pic-one" /></dev>
+        <dev class="additional-pic two"><img src="images/additional_pics_2.png" alt="additional-pic-one" /></dev>
     </dev>  
     </header>
 
@@ -24,14 +25,17 @@
        
             <!-- This is the startig screen. Remove this once the user clicks on "Start the Quiz" -->
             <section class="quiz-start">
-                <p>This quiz is to test your knowledge on Hawaii</p>
+                <p class="quiz-text start-text">This quiz is to test your knowledge about Hawaii</p>
                 <button type="button" id="start">Start the Quiz</button>
-                <dev class="picture-start"></dev>
+                <img class="picture-start" src="images/Start-pic.jpg" alt="start-pic"/>
             </section>
 
             <!-- This is where the question and answer choices are displayed -->
-            <section class="questions">
+            <section class="questions quiz-text">
+             <dev class="blockA">
                 <p class="question"></p>
+             </dev>
+             <dev class="blockB">
                 <form id="quiz">
                     <fieldset class="four-choices">
                         <!--   
@@ -43,17 +47,20 @@
                      </fieldset>
                      <button type="submit" id="quiz-submit">Submit</button>
                </form>
-                <p class="progress"></p>
+            </dev>
+            <dev class="blockC">
+                <p class="progress quiz-text"></p>
                 <!--Reset button, make sure to remove the "required" attrribute from the radio butonns when clicked"-->
                 <button type="click" class="reset">Restart Quiz</button>
+            </dev>
             </section>
 
             <!--Display the answer and explations-->
             <section class="answer">
-             <h1>You Answer is <span class="result"></span></h1>
+             <h1 class="quiz-text answer-text-top">You Answer is <span class="result"></span></h1>
              <dev class="quiz-picture"></dev>
-             <p class="answer-to-quiz-p">Answer: <span id="answer-to-quiz"></span></p>
-             <p class="explanation"></p>
+             <p class=" quiz-text answer-to-quiz-p">Answer: <span id="answer-to-quiz"></span></p>
+             <p class="quiz-text explanation"></p>
              <button type="click" id="next">Next</button>
              <button type="click" class="reset">Restart Quiz</button>
             </section>

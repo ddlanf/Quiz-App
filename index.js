@@ -10,6 +10,7 @@ function startQuiz(){
 
 //This function renders the Quiz
 function renderQuiz(){
+    checkIfResetIsNeeded(1);
     const question = getQuestion(STORE);
     const options = getOptions(STORE);
     $('.option').remove();
@@ -54,7 +55,7 @@ function showAnswer(){
         $('quiz-picture').html(`<img src="images/Q1_answers.jpg" alt="Q1_answer">`);
         $('#answer-to-quiz').html(`${STORE.questions[STORE.currentQuestion-1].options[STORE.questions[STORE.currentQuestion-1].answer]}`);
         $('.explanation').html(`${STORE.questions[STORE.currentQuestion-1].explanation}`);
-        if(STORE.currentQuestion === 5){ $('.reset').remove(); }
+        checkIfResetIsNeeded(5);
         $('.answer').css('display', 'block');
     }); 
 }
@@ -110,11 +111,23 @@ function resetValues(){
     renderQuiz();
 }
 
+function checkIfResetIsNeeded(num){
+    if(STORE.currentQuestion === num){ $('.reset').css('display', 'none'); }
+    else{$('.reset').css('display', 'block');}
+}
+//This function adjust the font size
+function adjustQuestionSize(questions, options){
+    alert("hello");
+}
+
 function runTheQuiz(){
     startQuiz();
     showAnswer();
     nextQuiz();
     restartQuiz();
 }
+
+//This function adjusts the font size for each element
+
 
 $(runTheQuiz);

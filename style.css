@@ -1,3 +1,14 @@
+body{
+    margin: 0;
+    width: 100%;
+    height:100%;
+    background-image: linear-gradient(rgb(174, 218, 230), rgb(127, 213, 236),rgb(29, 186, 230));
+}
+
+.quiz-text{
+    font-family: 'Amatic SC', cursive;
+}
+
 /*For the header design*/
 header{
     text-align: center;
@@ -27,7 +38,7 @@ img.top-picture{
     display: block;
     border: 1px solid black;
     margin: 20px auto;
-    padding: 10px;
+    padding-left: 3px;
     border-radius: 25px;
     width: 80%;
     height: 600px;
@@ -40,24 +51,42 @@ img.top-picture{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 25px;
-    margin-top: 100px;
+    margin-top: 50px;
     border: 1px solid black;
     width: 75%;
     height: 300px;
 }
 
+.start-text{
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+
 /*Question section*/
+
+#start{
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    background-color: chartreuse;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
 .question{
-    margin-bottom: 20px;
+    margin-bottom: 0;
     margin-top: 12px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 2px auto;
+    margin-right: 2px auto;
+    font-size: 35px;
 }
 
 .choice{
+    margin-top: 10px;
     display: block;
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 3px;
+    font-size: 40px;
 }
 
 .choice-4{
@@ -68,10 +97,46 @@ img.top-picture{
 
 .four-choices{
     border: none;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
-/* Quiz answern section*/
+.progress{
+    font-size: 30px;
+    margin-top: 10px;
+}
+#quiz-submit{
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    width: 100px;
+    background-image: linear-gradient(red, yellow, blue);
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+}
+
+.blockA{
+    position: relative;
+    top: 5%;
+}
+
+.blockB{
+    position: relative;
+    top: 5%;
+}
+ .blockC{
+     position: relative;
+ }
+/* Quiz answer section*/
+
+.answer-text-top{
+    font-size: 35px;
+}
 .quiz-picture{
     display: block;
     border-radius: 25px;
@@ -84,19 +149,41 @@ img.top-picture{
 }
 
 .answer-to-quiz-p{
-    margin-top: 5px;
+    margin-top: 0;
+    margin-bottom: 10pxpx;
+    font-size: 40px;
 }
 .explanation{
     margin-right: 2%;
     margin-left: 2%;
-    font-size: 14px;
-    margin-top: 0px;
+    margin-top: 0;
+    font-size: 25px;
 }
+
 #next{
     display: block;
     margin: 10px auto;
+    height: 23px;
+    width: 100px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
+.reset{
+    margin: 10px auto;
+    height: 23px;
+    width: 100px;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.quiz-text.result{
+    font-size: 20px;
+}
 /*End of quiz section*/
 .picture-end{
     display: block;
@@ -123,29 +210,6 @@ img.top-picture{
     .additional-pic{
         display: inline-block; 
         border: none; 
-    }
-
-    .top-picture{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .choice{
-        margin-bottom: 40px;
-    }
-
-    .four-choices{
-        margin-top: 20px;
-        margin-bottom: 35px;
-    }
-
-    .quiz-picture{
-        height: 250px;
-    }
-
-    .explanation{
-        font-size: 18px;
-        margin-top: 0px;
     }
 }
 
