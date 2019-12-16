@@ -21,6 +21,7 @@ function renderQuiz(){
         <span class="answer-one-text option">${options[i]}</span>
         </label>`);
     }
+    $('.progress').html(`Question: ${STORE.currentQuestion}/5 | Score: ${STORE.correctAnswers}/5`);
     $('.questions').css('display', 'block');
 }
 
@@ -30,7 +31,7 @@ function getQuestion(item){
     return item.questions[item.currentQuestion-1].question;
 }
 
-//This function grabs the 
+//This function grabs the options
 function getOptions(item){
     console.log('Running getOptions()');
     return item.questions[item.currentQuestion-1].options;
@@ -70,20 +71,27 @@ function answerCheck(item){
 //This function is used to transition to the answer to the next quiz or to the ending section 
 function nextQuiz(){
     $('#next').click(function(event){
+        if(STORE.currentQuestion < 5){
         STORE.currentQuestion++;
         $('.answer').css('display', 'none');
         renderQuiz();
+        }
+        else{
+            endQuiz();
+        }
     });
 }
 
 //This function is used to transition to the ending page
 function endQuiz(){
-    
+    $('.answer').css('display', 'none');
+    $('.score').html(STORE.correctAnswers +'out of 5');
+    $('.quiz-end').css('display', 'block');
 } 
 
 //This function restarts the quiz from the ending page
 function restartQuiz(){
-    console.log('Running restartQuiz()');
+    
 }
 
 function runTheQuiz(){
