@@ -87,6 +87,11 @@ function endQuiz(){
     $('.answer').css('display', 'none');
     $('.score').html(STORE.correctAnswers +' out of 5');
     $('.quiz-end').css('display', 'block');
+
+    $('#retry').click(function(event){
+        $(this).closest('section').css('display', 'none');
+        resetValues();
+    });
 } 
 
 //This function restarts the quiz from the ending page
