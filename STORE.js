@@ -41,7 +41,7 @@ STORE = {
         }
     ],
 
-    currentQuestion: 1,
+    currentQuestion: 5,
     correctAnswers: 0
 };
 

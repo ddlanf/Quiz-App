@@ -206,11 +206,13 @@ function adjustAnswerSize(explanation, answer){
 }
 
 function resetFontSizeAndMargin(){
+    if ($(window).width() <= 900){	
     $('.question').css('font-size',`45px`);
     $('.choice').css('font-size',`40px`);
     $('.choice-4').css('margin-bottom',`15px`);
     $('.explanation').css('font-size',`30px`);
     $('.answer-to-quiz-p').css('font-size',`40px`);
+    }
 }
 
 function runTheQuiz(){
