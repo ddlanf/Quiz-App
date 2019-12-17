@@ -45,6 +45,8 @@ function showAnswer(){
         event.preventDefault();
         const answerId = $('input[name=choice]:checked', '#quiz').attr('id');
         const correctAnswer = answerCheck(answerId);
+        const explanation = getExplanation();
+        const answerToQuiz = getAnswerToQuiz();
         $('.questions').css('display', 'none')
         if(correctAnswer === true){
            // alert("correct");
@@ -54,13 +56,24 @@ function showAnswer(){
             $('.result').html('Incorrect').css('color', 'red');
         }
         $('quiz-picture').html(`<img src="images/Q1_answers.jpg" alt="Q1_answer">`);
-        $('#answer-to-quiz').html(`${STORE.questions[STORE.currentQuestion-1].options[STORE.questions[STORE.currentQuestion-1].answer]}`);
-        $('.explanation').html(`${STORE.questions[STORE.currentQuestion-1].explanation}`);
+        $('#answer-to-quiz').html(`${answerToQuiz}`);
+        $('.explanation').html(`${explanation}`);
         checkIfResetIsNeeded(5);
+        adjustAnswerSize(explanation, answerToQuiz);
         $('.answer').css('display', 'block');
     }); 
 
 }
+//Function grabs the answer
+function getExplanation(){
+    return STORE.questions[STORE.currentQuestion-1].explanation;
+}
+
+//Function grabs the answer
+function getAnswerToQuiz(){
+    return STORE.questions[STORE.currentQuestion-1].options[STORE.questions[STORE.currentQuestion-1].answer];
+};
+
 
 //This function checks the answer and return true or false
 function answerCheck(item){
@@ -121,10 +134,10 @@ function checkIfResetIsNeeded(num){
     else{$('.reset').css('display', 'block');}
 }
 
-//This function adjust the font size
+//This function adjust the font size of questions
 function adjustQuestionSize(question, options){
    //alert(parseInt($('.question').css('font-size'), 10));
-   currentAnswerSize = parseInt($('.question').css('font-size'), 10);
+   currentQuestionSize = parseInt($('.question').css('font-size'), 10);
    currentOptionSize = parseInt($('.choice').css('font-size'), 10);
    const NumberOfStrings = options.map(function(string){ return string.length });
    const sumOfStringNumbers = NumberOfStrings.reduce(function(a, b){ return a + b });
@@ -134,30 +147,70 @@ function adjustQuestionSize(question, options){
     $('.choice').css('font-size',`${currentOptionSize-5}px`);
     $('.choice-4').css('margin-bottom',`px`);
         if(question.length >= 40 && question.length <  60){
-            $('.question').css('font-size',`${currentAnswerSize-3}px`);
+            $('.question').css('font-size',`${currentQuestionSize-3}px`);
         }
         else if(question.length >= 150){
-            $('.question').css('font-size',`${currentAnswerSize-20}px`);
+            $('.question').css('font-size',`${currentQuestionSize-20}px`);
         }
    }
    else if(averageNumberOfStrings >= 50){
     $('.choice').css({'font-size':`${currentOptionSize-20}px`, 'margin-top':`3px`});
     $('.choice-4').css('margin-bottom',`5px`);
         if(question.length >= 40 && question.length <  60){
-            $('.question').css('font-size',`${currentAnswerSize-3}px`);
+            $('.question').css('font-size',`${currentQuestionSize-3}px`);
         }
         else if(question.length >= 150){
-            $('.question').css('font-size',`${currentAnswerSize-20}px`);
+            $('.question').css('font-size',`${currentQuestionSize-20}px`);
         }
    }
  
-   alert(`${question.length} : ${averageNumberOfStrings}`);
+   //alert(`${question.length} : ${averageNumberOfStrings}`);
+}
+
+//This function adjust the font size of answers
+function adjustAnswerSize(explanation, answer){
+   currentAnswerSize = parseInt($('.answer-to-quiz-p').css('font-size'), 10);
+   currentExplanationSize = parseInt($('.explanation').css('font-size'), 10);
+  // alert(`${explanation.length} | ${answer.length}`);
+   
+   if(explanation.length > 120 && explanation.length < 150){
+    $('.explanation').css('font-size',`${currentExplanationSize-1}px`);
+        if(answer.length >= 10 && answer.length < 15){
+            $('.answer-to-quiz-p').css('font-size',`${currentAnswerSize-2}px`);
+        }
+        else if(answer.length >= 15){
+            $('.answer-to-quiz-p').css('font-size',`${currentAnswerSize-8}px`);
+        }
+   }
+   else if(explanation.length >= 150 && explanation.length < 200){
+    $('.explanation').css('font-size',`${currentExplanationSize- 3}px`);
+    
+        if(answer.length >= 10 && answer.length < 15){
+            $('.answer-to-quiz-p').css('font-size',`${currentAnswerSize-5}px`);
+        }
+        else if(answer.length >= 15){
+            $('.answer-to-quiz-p').css('font-size',`${currentAnswerSize-10}px`);
+        }
+   }
+   else if(explanation.length > 200){
+    $('.explanation').css('font-size',`${currentExplanationSize- 10}px`);
+    
+        if(answer.length >= 10 && answer.length < 15){
+            $('.answer-to-quiz-p').css('font-size',`${currentAnswerSize-5}px`);
+        }
+        else if(answer.length >= 15){
+            $('.answer-to-quiz-p').css('font-size',`${currentAnswerSize-11}px`);
+        }
+   }
+
 }
 
 function resetFontSizeAndMargin(){
     $('.question').css('font-size',`45px`);
     $('.choice').css('font-size',`40px`);
     $('.choice-4').css('margin-bottom',`15px`);
+    $('.explanation').css('font-size',`30px`);
+    $('.answer-to-quiz-p').css('font-size',`40px`);
 }
 
 function runTheQuiz(){

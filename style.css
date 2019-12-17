@@ -7,6 +7,7 @@ body{
 
 .quiz-text{
     font-family: 'Amatic SC', cursive;
+    color: black;
 }
 
 /*For the header design*/
@@ -25,7 +26,7 @@ header{
     margin-bottom: 0;
 }
 
-img.top-picture{
+.top-picture{
     display: inline-block;
     width: 300px;
     height: 200px; 
@@ -36,10 +37,11 @@ img.top-picture{
 .quiz-container{
     text-align: center;
     display: block;
-    border: 1px solid black;
+    border: 1px solid palegoldenrod;
     margin: 20px auto;
     padding-left: 3px;
     border-radius: 25px;
+    background: url(images/quizcontainer.png);
     width: 80%;
     height: 600px;
 }
@@ -51,15 +53,17 @@ img.top-picture{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 25px;
-    margin-top: 50px;
-    border: 1px solid black;
+    margin-top: 20px;
+    border: none;
     width: 75%;
     height: 300px;
 }
 
 .start-text{
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 3px;
+    margin-right: 2px auto;
+    margin-left: 2px auto;
 }
 
 /*Question section*/
@@ -142,6 +146,7 @@ img.top-picture{
 .answer-text-top{
     font-size: 35px;
     margin-bottom: 0;
+    margin-top: 25px;
 }
 .quiz-picture{
     display: block;
@@ -163,13 +168,17 @@ img.top-picture{
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 0;
+    margin-bottom: 10px;
     font-size: 30px;
 }
 
 #next{
     display: block;
-    margin: 10px auto;
-    height: 23px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    height: 35px;
     width: 100px;
     background-color: greenyellow;
     border: none;
@@ -196,11 +205,30 @@ img.top-picture{
     border-radius: 25px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1 none;
     width: 75%;
     height: 350px;
+}
+
+#retry{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    background-image: radial-gradient(circle, red, yellow, green);
+}
+
+.end-text{
+    font-size: 33px;
+    margin: 0;
+    margin-top: 15px;
 }
 
 /*Additional pics*/
