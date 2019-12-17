@@ -260,7 +260,12 @@ header{
     height: 120px; 
     border: none;
 }
-
+.tree-1{
+    display: none;
+}
+.tree-2{
+    display: none;
+}
 
 @media only screen and (min-width: 830px) {
     .additional-pic{
@@ -286,6 +291,22 @@ header{
         font-size: 40px;
     }
 }
+
+@media only screen and (min-width: 1500px) {
+    .tree-1{
+        display: inline-block;
+        position: absolute;
+        left:0;
+        top: 38%;
+    }
+    .tree-2{
+        display: inline-block;
+        position: absolute;
+        right:0;
+        top: 38%;
+    }
+}
+
 
 /* User this section to switch to different parts of the quiz*/
 
