@@ -8,6 +8,7 @@ body{
 .quiz-text{
     font-family: 'Amatic SC', cursive;
     color: black;
+    font-weight: 500;
 }
 
 /*For the header design*/
@@ -45,6 +46,7 @@ header{
     background: url(images/quizcontainer.png);
     width: 80%;
     height: 600px;
+    max-width: 700px;
 }
 
 /*Starting screen*/
@@ -58,7 +60,7 @@ header{
     border: none;
     width: 85%;
     height: auto;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 .start-text{
@@ -256,17 +258,33 @@ header{
     display: none;
     width: 200px;
     height: 120px; 
-    border: 1px solid black;
+    border: none;
 }
 
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 830px) {
     .additional-pic{
-        display: inline-block; 
-        border: none; 
+        display: inline-block;
     }
-
-
+    .question{
+        font-size: 48px;
+    }
+    .choice{
+        font-size: 43px;
+    }
+    .explanation{
+        font-size: 33px;
+    }
+    .answer-to-quiz-p{
+        font-size: 43px;
+    }
+    .quiz-picture{
+        height: 250px;
+        width:  250px;
+    }
+    .answer-text-top{
+        font-size: 40px;
+    }
 }
 
 /* User this section to switch to different parts of the quiz*/

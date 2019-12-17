@@ -33,7 +33,7 @@ STORE = {
         },
 
         {
-            question: "Hawaiin Pidgin English is an  English-based creole language spoken in Hawaii. Which of these Hawaiin Pidgin English statement translates to “That uncle is very smart, he become a web developer” in plain English?",
+            question: "Hawaiin Pidgin English is an English-based creole language spoken in Hawaii. Which of these Hawaiin Pidgin English statement translates to “My uncle is very smart, he became a web developer” in plain English?",
             options:['My uncle plenny lolo, he became a web developer.', 'Muh unko plenny akamai, he wen become one web developah.', 'Me uncle suppa intellec, he’s one web developah.', 'Muh unko small kine akamai,  he wen become one web developah.'],
             answer: 1,
             explanation: "In Hawaiin Pidgen English, the verb “to be” is often omitted and past tense is expressed using “went” in front of a present tense. As for pronunciation, long vowels and “r” after a vowel are not pronounced. Words ending in “le”, ”al”, and ”el” are often pronounced with “o” or “ol”.",
@@ -41,7 +41,7 @@ STORE = {
         }
     ],
 
-    currentQuestion: 5,
+    currentQuestion: 1,
     correctAnswers: 0
 };
 
