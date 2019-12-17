@@ -23,6 +23,7 @@ function renderQuiz(){
         </label>`);
     }
     $('.progress').html(`Question: ${STORE.currentQuestion}/5 | Score: ${STORE.correctAnswers}/5`);
+    adjustQuestionSize(question, options);
     $('.questions').css('display', 'block');
 }
 
@@ -58,6 +59,7 @@ function showAnswer(){
         checkIfResetIsNeeded(5);
         $('.answer').css('display', 'block');
     }); 
+
 }
 
 //This function checks the answer and return true or false
@@ -77,6 +79,7 @@ function nextQuiz(){
         if(STORE.currentQuestion < 5){
         STORE.currentQuestion++;
         $('.answer').css('display', 'none');
+        resetFontSizeAndMargin();
         renderQuiz();
         }
         else{
@@ -93,6 +96,7 @@ function endQuiz(){
 
     $('#retry').click(function(event){
         $(this).closest('section').css('display', 'none');
+        resetFontSizeAndMargin();
         resetValues();
     });
 } 
@@ -101,6 +105,7 @@ function endQuiz(){
 function restartQuiz(){
     $('.reset').click(function(event){
         $(this).closest('section').css('display', 'none');
+        resetFontSizeAndMargin();
         resetValues();
     });
 }
@@ -115,9 +120,44 @@ function checkIfResetIsNeeded(num){
     if(STORE.currentQuestion === num){ $('.reset').css('display', 'none'); }
     else{$('.reset').css('display', 'block');}
 }
+
 //This function adjust the font size
-function adjustQuestionSize(questions, options){
-    
+function adjustQuestionSize(question, options){
+   //alert(parseInt($('.question').css('font-size'), 10));
+   currentAnswerSize = parseInt($('.question').css('font-size'), 10);
+   currentOptionSize = parseInt($('.choice').css('font-size'), 10);
+   const NumberOfStrings = options.map(function(string){ return string.length });
+   const sumOfStringNumbers = NumberOfStrings.reduce(function(a, b){ return a + b });
+   const averageNumberOfStrings = sumOfStringNumbers/options.length;
+   
+   if(averageNumberOfStrings > 6 && averageNumberOfStrings < 50){
+    $('.choice').css('font-size',`${currentOptionSize-5}px`);
+    $('.choice-4').css('margin-bottom',`px`);
+        if(question.length >= 40 && question.length <  60){
+            $('.question').css('font-size',`${currentAnswerSize-3}px`);
+        }
+        else if(question.length >= 150){
+            $('.question').css('font-size',`${currentAnswerSize-20}px`);
+        }
+   }
+   else if(averageNumberOfStrings >= 50){
+    $('.choice').css({'font-size':`${currentOptionSize-20}px`, 'margin-top':`3px`});
+    $('.choice-4').css('margin-bottom',`5px`);
+        if(question.length >= 40 && question.length <  60){
+            $('.question').css('font-size',`${currentAnswerSize-3}px`);
+        }
+        else if(question.length >= 150){
+            $('.question').css('font-size',`${currentAnswerSize-20}px`);
+        }
+   }
+ 
+   alert(`${question.length} : ${averageNumberOfStrings}`);
+}
+
+function resetFontSizeAndMargin(){
+    $('.question').css('font-size',`45px`);
+    $('.choice').css('font-size',`40px`);
+    $('.choice-4').css('margin-bottom',`15px`);
 }
 
 function runTheQuiz(){
@@ -128,6 +168,4 @@ function runTheQuiz(){
 }
 
 //This function adjusts the font size for each element
-
-
 $(runTheQuiz);

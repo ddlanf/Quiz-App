@@ -75,12 +75,15 @@ img.top-picture{
 }
 .question{
     margin-bottom: 0;
-    margin-top: 12px;
+    margin-top: 15px;
     margin-left: 2px auto;
     margin-right: 2px auto;
-    font-size: 43px;
+    font-size: 45px;
 }
 
+.choice-1{
+    margin-top: 0;
+}
 .choice{
     margin-top: 10px;
     display: block;
@@ -92,12 +95,13 @@ img.top-picture{
 .choice-4{
     display: block;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .four-choices{
     border: none;
     margin-bottom: 0px;
+    margin-top: 0;
 }
 
 .progress{
@@ -107,6 +111,7 @@ img.top-picture{
 #quiz-submit{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
     height: 45px;
     width: 100px;
     background-image: linear-gradient(red, yellow, blue);
