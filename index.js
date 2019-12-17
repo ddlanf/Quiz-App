@@ -55,7 +55,7 @@ function showAnswer(){
         else{
             $('.result').html('Incorrect').css('color', 'red');
         }
-        $('quiz-picture').html(`<img src="images/Q1_answers.jpg" alt="Q1_answer">`);
+        $("img.quiz-picture").attr("src", `images/Q${STORE.currentQuestion}_answer.jpg`);
         $('#answer-to-quiz').html(`${answerToQuiz}`);
         $('.explanation').html(`${explanation}`);
         checkIfResetIsNeeded(5);
