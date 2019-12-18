@@ -25,6 +25,7 @@ header{
     font-family: 'Calligraffitti', cursive;
     font-size: 60px;
     margin-bottom: 0;
+    
 }
 
 .top-picture{
@@ -289,6 +290,12 @@ header{
     }
     .answer-text-top{
         font-size: 40px;
+    }
+    .start-text{
+        font-size: 50px;
+        margin-top: 15px;
+        margin-right: 2px auto;
+        margin-left: 2px auto;
     }
 }
 
