@@ -13,17 +13,17 @@
     <!--Top design on the quiz app. This will not be removed-->
     <header>
     <h1 class="title">Hawaii Quiz</h1>
-    <dev class="top-pic-container">     
-        <dev class="additional-pic one"><img src="images/additional_pics_1.png" alt="additional-pic-one" /></dev>
-        <dev class="top-picture">
+    <div class="top-pic-container">     
+        <div class="additional-pic one"><img src="images/additional_pics_1.png" alt="additional-pic-one" /></div>
+        <div class="top-picture">
             <img class = "top-picture" src="images/Top-pic.jpg" alt="top-image"/>
-        </dev>
-        <dev class="additional-pic two"><img src="images/additional_pics_2.png" alt="additional-pic-two" /></dev>
-    </dev>  
+        </div>
+        <div class="additional-pic two"><img src="images/additional_pics_2.png" alt="additional-pic-two" /></div>
+    </div>  
     </header>
 
     <!--This contains the questions-->
-    <dev class="quiz-container">
+    <div class="quiz-container">
             <!-- This is the startig screen. Remove this once the user clicks on "Start the Quiz" -->
             <section class="quiz-start">
                 <p class="quiz-text start-text">Aloha!! Take this quiz to test your knowledge on the topics of Hawaii</p>
@@ -33,10 +33,10 @@
 
             <!-- This is where the question and answer choices are displayed -->
             <section class="questions quiz-text">
-             <dev class="blockA">
+             <div class="blockA">
                 <p class="question"></p>
-             </dev>
-             <dev class="blockB">
+             </div>
+             <div class="blockB">
                 <form id="quiz">
                     <fieldset class="four-choices">
                         <!--   
@@ -48,12 +48,12 @@
                      </fieldset>
                      <button type="submit" id="quiz-submit">Submit</button>
                </form>
-            </dev>
-            <dev class="blockC">
+            </div>
+            <div class="blockC">
                 <p class="progress quiz-text"></p>
                 <!--Reset button, make sure to remove the "required" attrribute from the radio butonns when clicked"-->
                 <button type="click" class="reset">Restart Quiz</button>
-            </dev>
+            </div>
             </section>
 
             <!--Display the answer and explations-->
@@ -74,7 +74,7 @@
                  <!--Restart button-->
                 <button type="click" id="retry">Try Again</button>
             </section>
-    </dev>    
+    </div>    
     <img class="tree-1" src="images/tree2.png" alt="more-pic-two"/>
     <img class="tree-2" src="images/tree.png" alt="more-pic"/>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

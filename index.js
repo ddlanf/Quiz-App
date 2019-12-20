@@ -156,25 +156,26 @@ function adjustQuestionSize(question, options){
         if(question.length >= 40 && question.length <  60){
             $('.question').css('font-size',`${currentQuestionSize-3}px`);
         }
-        else if(question.length >= 150){
-            if ($(window).width() < 500){
-            $('.question').css('font-size',`${currentQuestionSize-20}px`);
-            }
-            else {$('.question').css('font-size',`${currentQuestionSize-15}px`)};
-        }
    }
    else if(averageNumberOfStrings >= 50){
     if ($(window).width() < 530){
         $('.choice').css({'font-size':`${currentOptionSize-20}px`, 'margin-top':`3px`});
     }
-    else{ $('.choice').css('font-size',`${currentOptionSize-16}px`); }
+    else if ($(window).width() < 750){
+        $('.choice').css({'font-size':`${currentOptionSize-16}px`, 'margin-top':`3px`});
+    }
+    else{ $('.choice').css('font-size',`${currentOptionSize-13}px`); }
+
     $('.choice-4').css('margin-bottom',`5px`);
         if(question.length >= 40 && question.length <  60){
             $('.question').css('font-size',`${currentQuestionSize-3}px`);
         }
         else if(question.length >= 150){
-            if ($(window).width() < 500){
+            if ($(window).width() < 530){
             $('.question').css('font-size',`${currentQuestionSize-20}px`);
+            }
+            if ($(window).width() < 750){
+                $('.question').css('font-size',`${currentQuestionSize-17}px`);
             }
             else{  $('.question').css('font-size',`${currentQuestionSize-15}px`);}
         }
@@ -210,7 +211,7 @@ function adjustAnswerSize(explanation, answer){
    }
    else if(explanation.length > 200){
     if ($(window).width() < 500){
-         $('.explanation').css('font-size',`${currentExplanationSize- 12}px`);
+         $('.explanation').css('font-size',`${currentExplanationSize- 11}px`);
     }
     else{  $('.explanation').css('font-size',`${currentExplanationSize- 7}px`); }
         if(answer.length >= 10 && answer.length < 15){
