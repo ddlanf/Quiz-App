@@ -174,7 +174,7 @@ function adjustQuestionSize(question, options){
             if ($(window).width() < 530){
             $('.question').css('font-size',`${currentQuestionSize-20}px`);
             }
-            if ($(window).width() < 750){
+            else if ($(window).width() < 750){
                 $('.question').css('font-size',`${currentQuestionSize-17}px`);
             }
             else{  $('.question').css('font-size',`${currentQuestionSize-15}px`);}
