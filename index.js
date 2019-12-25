@@ -18,10 +18,11 @@ function renderQuiz(){
     $('.question').html(`Q${STORE.currentQuestion}. ` + question);
     for(let i = 0; i < options.length; i++){
         $('.four-choices').append(`
-        <label class="choice choice-${i+1} option" for="choice">
+        <div class="choice choice-${i+1} option" for="choice">
         <input class="radio option" type="radio" id="${i}" name="choice" values="${options[i]}"required>
         <span class="answer-one-text option">${options[i]}</span>
-        </label>`);
+        </div>`
+        );
     }
     $('.progress').html(`Question: ${STORE.currentQuestion}/5 | Score: ${STORE.correctAnswers}/5`);
     adjustQuestionSize(question, options);
